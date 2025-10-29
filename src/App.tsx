@@ -42,7 +42,7 @@ const App: React.FC = () => {
         </div>
       </aside>
 
-      <main className="ml-[33.333%] flex-1 overflow-y-scroll bg-gray-50 p-10 pt-[72px]">
+      <main className="ml-[33.333%] flex-1 overflow-y-scroll bg-gray-50 p-10 pt-[72px] space-y-16">
         <section id="projects">
           <h2 className="text-xl font-bold mb-6">Projects</h2>
           <div className="grid grid-cols-2 gap-6">
@@ -51,6 +51,44 @@ const App: React.FC = () => {
             <div className="bg-gray-300 h-48 rounded-lg shadow" />
             <div className="bg-gray-300 h-48 rounded-lg shadow" />
           </div>
+        </section>
+         <section id="skills">
+          <h2 className="text-xl font-bold mb-6">Skills & Technologies</h2>
+          <div className="grid grid-cols-2 gap-6">
+            <div className="bg-gray-300 h-16 rounded-lg shadow" />
+            <div className="bg-gray-300 h-16 rounded-lg shadow" />
+            <div className="bg-gray-300 h-16 rounded-lg shadow" />
+            <div className="bg-gray-300 h-16 rounded-lg shadow" />
+            <div className="bg-gray-300 h-16 rounded-lg shadow" />
+            <div className="bg-gray-300 h-16 rounded-lg shadow" />
+          </div>
+        </section>
+
+        <section id="contact">
+          <h2 className="text-xl font-bold mb-6">Contact Me</h2>
+          <form className="space-y-4 max-w-md">
+            <input
+              type="text"
+              placeholder="Your Name"
+              className="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-gray-400"
+            />
+            <input
+              type="email"
+              placeholder="Your Email"
+              className="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-gray-400"
+            />
+            <textarea
+              placeholder="Your Message"
+              rows={4}
+              className="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-gray-400"
+            />
+            <button
+              type="submit"
+              className="w-full border border-gray-800 px-4 py-2 rounded-md hover:bg-gray-100 transition"
+            >
+              Send Message
+            </button>
+          </form>
         </section>
       </main>
     </div>
