@@ -6,7 +6,7 @@ const App: React.FC = () => {
     <div className="flex h-screen font-serif">
       <Navbar />
 
-      <aside className="w-1/3 min-w-[320px] bg-white border-r border-gray-300 flex flex-col items-center justify-center p-8 fixed top-16 h-[calc(100%-64px)]">
+      <aside className="w-1/3 min-w-[320px] bg-white border-r border-gray-300 flex flex-col items-center justify-center p-8 fixed h-full top-[72px]">
         <div className="flex flex-col items-center text-center">
           <div className="w-32 h-32 bg-gray-200 rounded-full mb-6" />
 
@@ -42,16 +42,16 @@ const App: React.FC = () => {
         </div>
       </aside>
 
-      <main className="ml-[33.333%] flex-1 overflow-y-scroll bg-gray-50 p-10 pt-24">
-        <h2 id="projects" className="text-xl font-bold mb-6">
-          Projects
-        </h2>
-        <div className="grid grid-cols-2 gap-6">
-          <div className="bg-gray-300 h-48 rounded-lg shadow" />
-          <div className="bg-gray-300 h-48 rounded-lg shadow" />
-          <div className="bg-gray-300 h-48 rounded-lg shadow" />
-          <div className="bg-gray-300 h-48 rounded-lg shadow" />
-        </div>
+      <main className="ml-[33.333%] flex-1 overflow-y-scroll bg-gray-50 p-10 pt-[72px]">
+        <section id="projects">
+          <h2 className="text-xl font-bold mb-6">Projects</h2>
+          <div className="grid grid-cols-2 gap-6">
+            <div className="bg-gray-300 h-48 rounded-lg shadow" />
+            <div className="bg-gray-300 h-48 rounded-lg shadow" />
+            <div className="bg-gray-300 h-48 rounded-lg shadow" />
+            <div className="bg-gray-300 h-48 rounded-lg shadow" />
+          </div>
+        </section>
       </main>
     </div>
   );
