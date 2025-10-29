@@ -75,22 +75,25 @@ const App: React.FC = () => {
               href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-gray-900 transition-colors text-sm"
+              className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors text-sm"
             >
+              <img src="/icons/github.png" alt="GitHub" className="w-5 h-5" />
               GitHub
             </a>
             <a
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-gray-900 transition-colors text-sm"
+              className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors text-sm"
             >
+              <img src="/icons/linkedin.png" alt="LinkedIn" className="w-5 h-5" />
               LinkedIn
             </a>
             <a
               href="mailto:daniel.willems@student.fontys.nl"
-              className="text-gray-600 hover:text-gray-900 transition-colors text-sm"
+              className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors text-sm"
             >
+              <img src="/icons/email.png" alt="Email" className="w-5 h-5" />
               Email
             </a>
           </div>
