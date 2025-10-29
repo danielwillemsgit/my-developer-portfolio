@@ -223,24 +223,44 @@ const App: React.FC = () => {
           <h2 className="text-5xl font-bold mb-16">Skills & Technologies</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              'C#',
-              'Java',
-              'JavaScript',
-              'HTML & CSS',
-              'Spring Boot',
-              'ASP.NET Core',
-              'REST APIs',
-              'SQL',
-              'GitHub & GitLab',
-              'Docker',
-              'SonarQube',
-              'CI/CD Pipelines',
-            ].map((skill: string, i: number) => (
+              { name: 'C#', icon: '/icons/csharp.png' },
+              { name: 'Java', icon: '/icons/java.png' },
+              { name: 'JavaScript', icon: '/icons/javascript.png' },
+              { name: 'HTML & CSS', icons: ['/icons/html.png', '/icons/css.png'] },
+              { name: 'Spring Boot', icon: '/icons/springboot.png' },
+              { name: 'ASP.NET Core', icon: '/icons/netcore.png' },
+              { name: 'REST APIs', icon: '/icons/restapi.png' },
+              { name: 'SQL', icon: '/icons/sql.png' },
+              { name: 'GitHub & GitLab', icons: ['/icons/github.png', '/icons/gitlab.png'] },
+              { name: 'Docker', icon: '/icons/docker.png' },
+              { name: 'SonarQube', icon: '/icons/sonarqube.png' },
+              { name: 'CI/CD Pipelines', icon: '/icons/cicd.png' },
+            ].map((skill, i: number) => (
               <div
                 key={i}
                 className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100"
               >
-                <h3 className="text-xl font-semibold text-gray-900">{skill}</h3>
+                <div className="flex items-center justify-between gap-4">
+                  <h3 className="text-xl font-semibold text-gray-900">{skill.name}</h3>
+                  <div className="flex gap-2">
+                    {skill.icons ? (
+                      skill.icons.map((iconPath: string, idx: number) => (
+                        <img
+                          key={idx}
+                          src={iconPath}
+                          alt={`${skill.name} icon ${idx + 1}`}
+                          className="w-12 h-12"
+                        />
+                      ))
+                    ) : skill.icon ? (
+                      <img
+                        src={skill.icon}
+                        alt={`${skill.name} icon`}
+                        className="w-12 h-12"
+                      />
+                    ) : null}
+                  </div>
+                </div>
               </div>
             ))}
           </div>
@@ -286,8 +306,19 @@ const App: React.FC = () => {
       </section>
 
       <footer className="py-12 px-8 border-t border-gray-200">
-        <div className="max-w-6xl mx-auto text-center text-gray-600">
+        <div className="max-w-6xl mx-auto text-center text-gray-600 space-y-4">
           <p>© 2025 Daniel Willems. All rights reserved.</p>
+          <p className="text-sm">
+            Icons by{' '}
+            <a
+              href="https://icons8.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-900 hover:underline"
+            >
+              Icons8
+            </a>
+          </p>
         </div>
       </footer>
     </div>
