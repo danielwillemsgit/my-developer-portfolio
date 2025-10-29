@@ -43,6 +43,17 @@ const App: React.FC = () => {
       </aside>
 
       <main className="ml-[33.333%] flex-1 overflow-y-scroll bg-gray-50 p-10 pt-[72px] space-y-16">
+        <section id="about">
+          <h2 className="text-xl font-bold mb-4">About Me</h2>
+          <p className="text-gray-700 leading-relaxed max-w-2xl">
+            I am a passionate Full Stack Developer who enjoys building clean,
+            responsive, and user-friendly web applications. I love exploring new
+            technologies and frameworks, from front-end interfaces to scalable
+            back-end systems. My goal is to turn ideas into impactful digital
+            solutions through thoughtful design and reliable code.
+          </p>
+          
+        </section>
         <section id="projects">
           <h2 className="text-xl font-bold mb-6">Projects</h2>
           <div className="grid grid-cols-2 gap-6">
@@ -52,7 +63,7 @@ const App: React.FC = () => {
             <div className="bg-gray-300 h-48 rounded-lg shadow" />
           </div>
         </section>
-         <section id="skills">
+        <section id="skills">
           <h2 className="text-xl font-bold mb-6">Skills & Technologies</h2>
           <div className="grid grid-cols-2 gap-6">
             <div className="bg-gray-300 h-16 rounded-lg shadow" />
