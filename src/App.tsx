@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import SymphonySeatDetail from "./pages/SymphonySeatDetail";
 import SmartPackagingSystemDetail from "./pages/SmartPackagingSystemDetail";
 import ZooBazaarDetail from "./pages/ZooBazaarDetail";
+import CustomCarDetail from "./pages/CustomCarDetail";
 
 const App: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -23,6 +24,10 @@ const App: React.FC = () => {
 
   if (currentPath === '/projects/zoobazaar') {
     return <ZooBazaarDetail />;
+  }
+
+  if (currentPath === '/projects/customcar') {
+    return <CustomCarDetail />;
   }
 
   const handleSubmit = (e: React.MouseEvent) => {
@@ -67,7 +72,7 @@ const App: React.FC = () => {
       title: "CustomCar",
       description: "A web application that allows customers to browse and purchase car parts online, while helping the business track sales, manage inventory, and attract more customers.",
       image: "/images/CustomCarHomePage.png",
-      link: "#" 
+      link: "/projects/customcar" 
     }
   ];
 
@@ -80,7 +85,7 @@ const App: React.FC = () => {
           <div className="w-40 h-40 mx-auto mb-8 shadow-lg rounded-full overflow-hidden">
             <img
               src="/images/dwprofilepicture.jpg"
-              alt="Daniel Willems"
+              alt="Daniel Willems - Full Stack Developer"
               className="w-full h-full object-cover"
             />
           </div>
@@ -102,13 +107,13 @@ const App: React.FC = () => {
           <div className="flex gap-4 justify-center pt-8 relative">
             <a
               href="#projects"
-              className="bg-gray-900 text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-all hover:shadow-xl transform hover:-translate-y-0.5"
+              className="bg-gray-900 text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-all hover:shadow-xl transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
             >
               View My Work
             </a>
             <a
               href="#contact"
-              className="border-2 border-gray-900 px-8 py-3 rounded-lg hover:bg-gray-900 hover:text-white transition-all"
+              className="border-2 border-gray-900 px-8 py-3 rounded-lg hover:bg-gray-900 hover:text-white transition-all focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
             >
               Contact Me
             </a>
@@ -119,7 +124,7 @@ const App: React.FC = () => {
               href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors text-sm"
+              className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors text-sm focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-offset-2 rounded"
             >
               <img src="/icons/github.png" alt="GitHub" className="w-5 h-5" />
               GitHub
@@ -128,14 +133,14 @@ const App: React.FC = () => {
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors text-sm"
+              className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors text-sm focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-offset-2 rounded"
             >
               <img src="/icons/linkedin.png" alt="LinkedIn" className="w-5 h-5" />
               LinkedIn
             </a>
             <a
               href="mailto:daniel.willems@student.fontys.nl"
-              className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors text-sm"
+              className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors text-sm focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-offset-2 rounded"
             >
               <img src="/icons/email.png" alt="Email" className="w-5 h-5" />
               Email
@@ -164,7 +169,7 @@ const App: React.FC = () => {
             {projects.map((project) => (
               <div
                 key={project.id}
-                className="group bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+                className="group bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 focus-within:ring-2 focus-within:ring-gray-900 focus-within:ring-offset-2"
               >
                 <div className="aspect-video bg-gradient-to-br from-gray-300 to-gray-400 relative overflow-hidden">
                   <img
@@ -185,7 +190,7 @@ const App: React.FC = () => {
 
                   <a
                     href={project.link}
-                    className="inline-block bg-gray-900 text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition-all hover:shadow-lg transform hover:-translate-y-0.5"
+                    className="inline-block bg-gray-900 text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition-all hover:shadow-lg transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900"
                   >
                     View Details →
                   </a>
@@ -219,7 +224,8 @@ const App: React.FC = () => {
             ].map((skill, i: number) => (
               <div
                 key={i}
-                className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100"
+                className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 focus-within:ring-2 focus-within:ring-gray-900 focus-within:ring-offset-2"
+                tabIndex={0}
               >
                 <div className="flex items-center justify-between gap-4">
                   <h3 className="text-xl font-semibold text-gray-900">{skill.name}</h3>
@@ -251,7 +257,7 @@ const App: React.FC = () => {
       <section id="contact" className="py-32 px-8 bg-white">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-5xl font-bold mb-16 text-center">Get In Touch</h2>
-          <div className="space-y-6">
+          <form className="space-y-6">
             <input
               type="text"
               name="name"
@@ -259,6 +265,8 @@ const App: React.FC = () => {
               value={formData.name}
               onChange={handleChange}
               className="w-full border-2 border-gray-200 rounded-xl p-4 focus:outline-none focus:border-gray-900 transition-colors"
+              aria-label="Your Name"
+              required
             />
             <input
               type="email"
@@ -267,6 +275,8 @@ const App: React.FC = () => {
               value={formData.email}
               onChange={handleChange}
               className="w-full border-2 border-gray-200 rounded-xl p-4 focus:outline-none focus:border-gray-900 transition-colors"
+              aria-label="Your Email"
+              required
             />
             <textarea
               name="message"
@@ -275,14 +285,17 @@ const App: React.FC = () => {
               value={formData.message}
               onChange={handleChange}
               className="w-full border-2 border-gray-200 rounded-xl p-4 focus:outline-none focus:border-gray-900 transition-colors"
+              aria-label="Your Message"
+              required
             />
             <button
               onClick={handleSubmit}
-              className="w-full bg-gray-900 text-white px-8 py-4 rounded-xl hover:bg-gray-800 transition-all hover:shadow-xl transform hover:-translate-y-0.5 font-medium text-lg"
+              className="w-full bg-gray-900 text-white px-8 py-4 rounded-xl hover:bg-gray-800 transition-all hover:shadow-xl transform hover:-translate-y-0.5 font-medium text-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900"
+              type="submit"
             >
               Send Message
             </button>
-          </div>
+          </form>
         </div>
       </section>
 
@@ -295,7 +308,7 @@ const App: React.FC = () => {
               href="https://icons8.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-900 hover:underline"
+              className="text-gray-900 hover:underline focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-offset-2 rounded"
             >
               Icons8
             </a>
