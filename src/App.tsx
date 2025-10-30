@@ -205,7 +205,7 @@ const App: React.FC = () => {
               { name: 'Spring Boot', icon: '/icons/springboot.png' },
               { name: 'ASP.NET Core', icon: '/icons/netcore.png' },
               { name: 'REST APIs', icon: '/icons/restapi.png' },
-              { name: 'SQL', icon: '/icons/sql.png' },
+              { name: 'SQL & MySQL', icons: ['/icons/sql.png', '/icons/mysql.png'] },
               { name: 'GitHub & GitLab', icons: ['/icons/github.png', '/icons/gitlab.png'] },
               { name: 'Docker', icon: '/icons/docker.png' },
               { name: 'SonarQube', icon: '/icons/sonarqube.png' },
