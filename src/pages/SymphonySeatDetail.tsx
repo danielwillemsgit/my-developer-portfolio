@@ -16,7 +16,7 @@ const SymphonySeatDetail = () => {
                     SymphonySeat
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl text-center mb-12">
-                    Full-stack React/TypeScript event ticketing platform with real-time seat selection and comprehensive management tools.
+                    Full-stack event ticketing platform with real-time seat selection and comprehensive management tools.
                 </p>
 
                 <div className="w-full max-w-5xl aspect-video mb-16 shadow-2xl rounded-3xl overflow-hidden border border-gray-100">
