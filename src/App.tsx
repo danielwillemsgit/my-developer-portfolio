@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "./components/Navbar";
+import SymphonySeatDetail from "./pages/SymphonySeatDetail";
 
 const App: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -7,6 +8,12 @@ const App: React.FC = () => {
     email: '',
     message: '',
   });
+
+  const currentPath = window.location.pathname;
+
+  if (currentPath === '/projects/symphonyseat') {
+    return <SymphonySeatDetail />;
+  }
 
   const handleSubmit = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -161,15 +168,23 @@ const App: React.FC = () => {
                         <h3 className="text-2xl font-semibold mb-4">
                           SymphonySeat
                         </h3>
-                        <p className="text-gray-700">
+                        <p className="text-gray-700 mb-6">
                           A concert and event ticketing platform where users can
                           browse events, view artists, select seats on an
                           interactive map, and purchase tickets. Organizers can
                           manage events and artists, while admins track sales
                           and real-time seat availability.
                         </p>
+
+                        <a
+                          href="/projects/symphonyseat"
+                          className="inline-block bg-gray-900 text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition-all hover:shadow-lg transform hover:-translate-y-0.5"
+                        >
+                          View Details →
+                        </a>
                       </>
                     )}
+
                     {isSecondProject && (
                       <>
                         <h3 className="text-2xl font-semibold mb-4">
@@ -182,6 +197,7 @@ const App: React.FC = () => {
                         </p>
                       </>
                     )}
+
                     {isThirdProject && (
                       <>
                         <h3 className="text-2xl font-semibold mb-4">
@@ -196,6 +212,7 @@ const App: React.FC = () => {
                         </p>
                       </>
                     )}
+
                     {isFourthProject && (
                       <>
                         <h3 className="text-2xl font-semibold mb-4">
