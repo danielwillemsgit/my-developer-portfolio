@@ -37,7 +37,7 @@ const SymphonySeatDetail = () => {
                             <li>• Real-time seat selection with live availability</li>
                             <li>• Role-based access (Admin/Organizer/Customer)</li>
                             <li>• Payment processing & analytics dashboards</li>
-                            <li>• Mobile-responsive design</li>
+                            <li>• Docker containerization for easy deployment</li>
                             <li>• Comprehensive testing suite</li>
                         </ul>
                     </div>
