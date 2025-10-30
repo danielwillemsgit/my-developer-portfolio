@@ -27,8 +27,8 @@ const SmartPackagingSystemDetail = () => {
                     />
                 </div>
 
-                <div className="w-full max-w-4xl grid md:grid-cols-3 gap-6 text-sm md:text-base">
-                    <div className="md:col-start-1 bg-white rounded-2xl p-4 shadow border border-gray-100">
+                <div className="w-full max-w-6xl grid md:grid-cols-5 gap-6 text-sm md:text-base">
+                    <div className="bg-white rounded-2xl p-4 shadow border border-gray-100">
                         <h2 className="text-lg font-semibold mb-3 text-gray-900">Core Tech Stack</h2>
                         <ul className="space-y-1 text-gray-700">
                             <li>• Frontend: React + TypeScript + Tailwind CSS</li>
@@ -63,6 +63,26 @@ const SmartPackagingSystemDetail = () => {
                             <li>• RESTful API integration</li>
                             <li>• Component-based architecture</li>
                             <li>• Optimized build process with Vite</li>
+                        </ul>
+                    </div>
+
+                    <div className="bg-white rounded-2xl p-4 shadow border border-gray-100">
+                        <h2 className="text-lg font-semibold mb-3 text-gray-900">My Contribution</h2>
+                        <ul className="space-y-1 text-gray-700">
+                            <li>• Developed interactive locker map component</li>
+                            <li>• Implemented package registration system</li>
+                            <li>• Designed responsive UI with Tailwind CSS</li>
+                            <li>• Implemented package search and filtering</li>
+                        </ul>
+                    </div>
+
+                    <div className="bg-white rounded-2xl p-4 shadow border border-gray-100">
+                        <h2 className="text-lg font-semibold mb-3 text-gray-900">What I Learned</h2>
+                        <ul className="space-y-1 text-gray-700">
+                            <li>• Accessibility considerations for color blindness</li>
+                            <li>• Interactive map development with React</li>
+                            <li>• Form validation and user input handling</li>
+                            <li>• Responsive design principles</li>
                         </ul>
                     </div>
                 </div>
