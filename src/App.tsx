@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import SymphonySeatDetail from "./pages/SymphonySeatDetail";
+import SmartPackagingSystemDetail from "./pages/SmartPackagingSystemDetail";
 
 const App: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -13,6 +14,10 @@ const App: React.FC = () => {
 
   if (currentPath === '/projects/symphonyseat') {
     return <SymphonySeatDetail />;
+  }
+  
+  if (currentPath === '/projects/smartpackagingsystem') {
+    return <SmartPackagingSystemDetail />;
   }
 
   const handleSubmit = (e: React.MouseEvent) => {
@@ -29,6 +34,37 @@ const App: React.FC = () => {
       [e.target.name]: e.target.value,
     });
   };
+
+  const projects = [
+    {
+      id: 1,
+      title: "SymphonySeat",
+      description: "A concert and event ticketing platform where users can browse events, view artists, select seats on an interactive map, and purchase tickets. Organizers can manage events and artists, while admins track sales and real-time seat availability.",
+      image: "/images/SymphonySeat-HomePage.png",
+      link: "/projects/symphonyseat"
+    },
+    {
+      id: 2,
+      title: "Smart Packaging System",
+      description: "A digital solution for Sioux Technologies that optimizes packaging logistics and tracks package storage efficiently.",
+      image: "/images/SmartPackagingSystemHomePage.png",
+      link: "/projects/smartpackagingsystem"
+    },
+    {
+      id: 3,
+      title: "Zoo Bazaar",
+      description: "An application that lets the user see an overview of all the animals, feeding schedules, medical history, employee details, animals by area/species and aggregated data/statistics for the animals and the zoo.",
+      image: "/images/ZooBazaar.png",
+      link: "#" 
+    },
+    {
+      id: 4,
+      title: "CustomCar",
+      description: "A web application that allows customers to browse and purchase car parts online, while helping the business track sales, manage inventory, and attract more customers.",
+      image: "/images/CustomCarHomePage.png",
+      link: "#" 
+    }
+  ];
 
   return (
     <div className="bg-gradient-to-br from-gray-50 via-white to-gray-100 min-h-screen">
@@ -120,116 +156,37 @@ const App: React.FC = () => {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-5xl font-bold mb-16">Featured Projects</h2>
           <div className="grid md:grid-cols-2 gap-12">
-            {[1, 2, 3, 4].map((i: number) => {
-              const isFirstProject = i === 1;
-              const isSecondProject = i === 2;
-              const isThirdProject = i === 3;
-              const isFourthProject = i === 4;
-
-              return (
-                <div
-                  key={i}
-                  className="group bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
-                >
-                  <div className="aspect-video bg-gradient-to-br from-gray-300 to-gray-400 relative overflow-hidden">
-                    {isFirstProject ? (
-                      <img
-                        src="/images/SymphonySeat-HomePage.png"
-                        alt="SymphonySeat project screenshot"
-                        className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
-                      />
-                    ) : isSecondProject ? (
-                      <img
-                        src="/images/SmartPackagingSystemHomePage.png"
-                        alt="Smart Packaging System Sioux project screenshot"
-                        className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
-                      />
-                    ) : isThirdProject ? (
-                      <img
-                        src="/images/ZooBazaar.png"
-                        alt="Zoo Bazaar project screenshot"
-                        className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
-                      />
-                    ) : isFourthProject ? (
-                      <img
-                        src="/images/CustomCarHomePage.png"
-                        alt="CustomCar project screenshot"
-                        className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
-                      />
-                    ) : (
-                      <div className="absolute inset-0 bg-gray-300" />
-                    )}
-                    <div className="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/10 transition-all duration-300" />
-                  </div>
-
-                  <div className="p-8">
-                    {isFirstProject && (
-                      <>
-                        <h3 className="text-2xl font-semibold mb-4">
-                          SymphonySeat
-                        </h3>
-                        <p className="text-gray-700 mb-6">
-                          A concert and event ticketing platform where users can
-                          browse events, view artists, select seats on an
-                          interactive map, and purchase tickets. Organizers can
-                          manage events and artists, while admins track sales
-                          and real-time seat availability.
-                        </p>
-
-                        <a
-                          href="/projects/symphonyseat"
-                          className="inline-block bg-gray-900 text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition-all hover:shadow-lg transform hover:-translate-y-0.5"
-                        >
-                          View Details →
-                        </a>
-                      </>
-                    )}
-
-                    {isSecondProject && (
-                      <>
-                        <h3 className="text-2xl font-semibold mb-4">
-                          Smart Packaging System
-                        </h3>
-                        <p className="text-gray-700">
-                          A digital solution for Sioux Technologies that
-                          optimizes packaging logistics and tracks package
-                          storage efficiently.
-                        </p>
-                      </>
-                    )}
-
-                    {isThirdProject && (
-                      <>
-                        <h3 className="text-2xl font-semibold mb-4">
-                          Zoo Bazaar
-                        </h3>
-                        <p className="text-gray-700">
-                          An application that lets the user see an overview of
-                          all the animals, feeding schedules, medical history,
-                          employee details, animals by area/species and
-                          aggregated data/statistics for the animals and the
-                          zoo.
-                        </p>
-                      </>
-                    )}
-
-                    {isFourthProject && (
-                      <>
-                        <h3 className="text-2xl font-semibold mb-4">
-                          CustomCar
-                        </h3>
-                        <p className="text-gray-700">
-                          A web application that allows customers to browse and
-                          purchase car parts online, while helping the business
-                          track sales, manage inventory, and attract more
-                          customers.
-                        </p>
-                      </>
-                    )}
-                  </div>
+            {projects.map((project) => (
+              <div
+                key={project.id}
+                className="group bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+              >
+                <div className="aspect-video bg-gradient-to-br from-gray-300 to-gray-400 relative overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={`${project.title} project screenshot`}
+                    className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/10 transition-all duration-300" />
                 </div>
-              );
-            })}
+
+                <div className="p-8">
+                  <h3 className="text-2xl font-semibold mb-4">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-700 mb-6">
+                    {project.description}
+                  </p>
+
+                  <a
+                    href={project.link}
+                    className="inline-block bg-gray-900 text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition-all hover:shadow-lg transform hover:-translate-y-0.5"
+                  >
+                    View Details →
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
