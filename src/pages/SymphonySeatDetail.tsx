@@ -31,6 +31,19 @@ const SymphonySeatDetail = () => {
                 </div>
 
                 <div className="w-full max-w-4xl grid md:grid-cols-3 gap-6 text-sm md:text-base">
+                    <div className="md:col-start-1 bg-white rounded-2xl p-4 shadow border border-gray-100">
+                        <h2 className="text-lg font-semibold mb-3 text-gray-900">Core Tech Stack</h2>
+                        <ul className="space-y-1 text-gray-700">
+                            <li>• Frontend: React + TypeScript + Tailwind CSS</li>
+                            <li>• Backend: Java + Spring Boot + Jpa/Hibernate</li>
+                            <li>• Database: MySQL with Flyway migrations</li>
+                            <li>• Real-time: WebSockets (STOMP)</li>
+                            <li>• State: React Context + JWT authentication</li>
+                            <li>• Testing: Vitest + Cypress</li>
+                            <li>• Build: Vite + PNPM</li>
+                        </ul>
+                    </div>
+
                     <div className="bg-white rounded-2xl p-4 shadow border border-gray-100">
                         <h2 className="text-lg font-semibold mb-3 text-gray-900">Key Features</h2>
                         <ul className="space-y-1 text-gray-700">
@@ -39,17 +52,6 @@ const SymphonySeatDetail = () => {
                             <li>• Payment processing & analytics dashboards</li>
                             <li>• Docker containerization for easy deployment</li>
                             <li>• Comprehensive testing suite</li>
-                        </ul>
-                    </div>
-
-                    <div className="bg-white rounded-2xl p-4 shadow border border-gray-100">
-                        <h2 className="text-lg font-semibold mb-3 text-gray-900">Core Tech Stack</h2>
-                        <ul className="space-y-1 text-gray-700">
-                            <li>• Frontend: React 19 + TypeScript + Tailwind CSS</li>
-                            <li>• Real-time: WebSockets (STOMP)</li>
-                            <li>• State: React Context + JWT authentication</li>
-                            <li>• Testing: Vitest + Cypress</li>
-                            <li>• Build: Vite + PNPM</li>
                         </ul>
                     </div>
 
@@ -63,6 +65,7 @@ const SymphonySeatDetail = () => {
                         </ul>
                     </div>
                 </div>
+
             </section>
 
             <footer className="py-12 px-8 border-t border-gray-200">
