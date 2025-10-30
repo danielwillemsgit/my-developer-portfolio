@@ -27,8 +27,8 @@ const ZooBazaarDetail = () => {
                     />
                 </div>
 
-                <div className="w-full max-w-4xl grid md:grid-cols-3 gap-6 text-sm md:text-base">
-                    <div className="md:col-start-1 bg-white rounded-2xl p-4 shadow border border-gray-100">
+                <div className="w-full max-w-6xl grid md:grid-cols-5 gap-6 text-sm md:text-base">
+                    <div className="bg-white rounded-2xl p-4 shadow border border-gray-100">
                         <h2 className="text-lg font-semibold mb-3 text-gray-900">Core Tech Stack</h2>
                         <ul className="space-y-1 text-gray-700">
                             <li>• Frontend: Windows Forms (WinForms)</li>
@@ -63,6 +63,31 @@ const ZooBazaarDetail = () => {
                             <li>• Comprehensive business rule validation</li>
                             <li>• Email service with QR code integration</li>
                             <li>• Contract-based employee scheduling</li>
+                        </ul>
+                    </div>
+
+                    <div className="bg-white rounded-2xl p-4 shadow border border-gray-100">
+                        <h2 className="text-lg font-semibold mb-3 text-gray-900">My Contribution</h2>
+                        <ul className="space-y-1 text-gray-700">
+                            <li>• Developed feeding schedule management system</li>
+                            <li>• Implemented automated shift planning algorithm</li>
+                            <li>• Built email service with QR code integration</li>
+                            <li>• Created employee contract validation system</li>
+                            <li>• Designed database schema and repositories</li>
+                            <li>• Implemented business logic layer</li>
+                        </ul>
+                    </div>
+
+                    <div className="bg-white rounded-2xl p-4 shadow border border-gray-100">
+                        <h2 className="text-lg font-semibold mb-3 text-gray-900">What I Learned</h2>
+                        <ul className="space-y-1 text-gray-700">
+                            <li>• Multi-layer architecture design patterns</li>
+                            <li>• Working with a group for a client</li>
+                            <li>• Complex business rule implementation</li>
+                            <li>• Database transaction management</li>
+                            <li>• Email service integration</li>
+                            <li>• QR code generation and usage</li>
+                            <li>• WinForms application development</li>
                         </ul>
                     </div>
                 </div>
