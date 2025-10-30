@@ -19,12 +19,45 @@ const SmartPackagingSystemDetail = () => {
                     Full-stack package management system with real-time locker tracking and comprehensive distribution tools for Sioux Technologies.
                 </p>
 
-                <div className="w-full max-w-5xl aspect-video mb-16 shadow-2xl rounded-3xl overflow-hidden border border-gray-100">
-                    <img
-                        src="/images/Sioux.jpg"
-                        alt="SmartPackagingSystem Dashboard"
-                        className="w-full h-full object-cover"
-                    />
+                <div className="w-full max-w-5xl mb-8">
+                    <div className="aspect-video shadow-2xl rounded-3xl overflow-hidden border border-gray-100">
+                        <video
+                            src="/videos/5packparcelvideo.mp4"
+                            className="w-full h-full object-cover object-top"
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                        />
+                    </div>
+                    <p className="text-center text-sm text-gray-500 mt-3">Demo of Application</p>
+                </div>
+
+                <div className="w-full max-w-5xl grid md:grid-cols-2 gap-6 mb-16">
+                    <div>
+                        <div className="aspect-video shadow-lg rounded-2xl overflow-hidden border border-gray-100">
+                            <img
+                                src="/images/Sioux.jpg"
+                                alt="SmartPackagingSystem Dashboard"
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
+                        <p className="text-center text-sm text-gray-500 mt-3">Me at the Company</p>
+                    </div>
+
+                    <div>
+                        <div className="aspect-video shadow-lg rounded-2xl overflow-hidden border border-gray-100">
+                            <video
+                                src="/videos/smartpackagingsystem.mp4"
+                                className="w-full h-full object-contain"
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                            />
+                        </div>
+                        <p className="text-center text-sm text-gray-500 mt-3">The Interactive Locker Map</p>
+                    </div>
                 </div>
 
                 <div className="w-full max-w-6xl grid md:grid-cols-5 gap-6 text-sm md:text-base">
