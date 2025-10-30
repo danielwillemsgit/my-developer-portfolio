@@ -30,8 +30,8 @@ const SymphonySeatDetail = () => {
                     </video>
                 </div>
 
-                <div className="w-full max-w-4xl grid md:grid-cols-3 gap-6 text-sm md:text-base">
-                    <div className="md:col-start-1 bg-white rounded-2xl p-4 shadow border border-gray-100">
+                <div className="w-full max-w-6xl grid md:grid-cols-4 gap-6 text-sm md:text-base">
+                    <div className="bg-white rounded-2xl p-4 shadow border border-gray-100">
                         <h2 className="text-lg font-semibold mb-3 text-gray-900">Core Tech Stack</h2>
                         <ul className="space-y-1 text-gray-700">
                             <li>• Frontend: React + TypeScript + Tailwind CSS</li>
@@ -62,6 +62,18 @@ const SymphonySeatDetail = () => {
                             <li>• Type-safe throughout with TypeScript</li>
                             <li>• RESTful APIs with JWT authentication</li>
                             <li>• Modern development with fast Vite builds</li>
+                        </ul>
+                    </div>
+
+                    <div className="bg-white rounded-2xl p-4 shadow border border-gray-100">
+                        <h2 className="text-lg font-semibold mb-3 text-gray-900">What I Learned</h2>
+                        <ul className="space-y-1 text-gray-700">
+                            <li>• Real-time WebSocket communication</li>
+                            <li>• Optimistic locking for concurrency control</li>
+                            <li>• JWT authentication implementation</li>
+                            <li>• TypeScript in full-stack applications</li>
+                            <li>• Docker containerization and deployment</li>
+                            <li>• End-to-end testing with Cypress</li>
                         </ul>
                     </div>
                 </div>
