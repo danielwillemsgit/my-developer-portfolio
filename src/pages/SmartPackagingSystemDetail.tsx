@@ -16,7 +16,7 @@ const SmartPackagingSystemDetail = () => {
                     Smart Packaging System
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl text-center mb-12">
-                    Full-stack React/TypeScript package management system with real-time locker tracking and comprehensive distribution tools for Sioux Technologies.
+                    Full-stack package management system with real-time locker tracking and comprehensive distribution tools for Sioux Technologies.
                 </p>
 
                 <div className="w-full max-w-5xl aspect-video mb-16 shadow-2xl rounded-3xl overflow-hidden border border-gray-100">

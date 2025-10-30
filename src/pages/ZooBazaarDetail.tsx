@@ -16,7 +16,7 @@ const ZooBazaarDetail = () => {
                     Zoo Bazaar
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl text-center mb-12">
-                    Comprehensive zoo management system with automated scheduling, feeding management, and employee administration built on WinForms architecture.
+                    Zoo management system with automated scheduling, feeding management, and employee administration.
                 </p>
 
                 <div className="w-full max-w-5xl aspect-video mb-16 shadow-2xl rounded-3xl overflow-hidden border border-gray-100">

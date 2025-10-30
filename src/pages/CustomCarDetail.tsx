@@ -16,7 +16,7 @@ const CustomCarDetail = () => {
                     CustomCar
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl text-center mb-12">
-                    Car parts e-commerce platform with advanced sales forecasting and inventory management system built on ASP.NET Core.
+                    Car parts e-commerce platform with advanced sales forecasting and inventory management system.
                 </p>
 
                 <div className="w-full max-w-5xl aspect-video mb-16 shadow-2xl rounded-3xl overflow-hidden border border-gray-100">
