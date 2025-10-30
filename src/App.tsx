@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import SymphonySeatDetail from "./pages/SymphonySeatDetail";
 import SmartPackagingSystemDetail from "./pages/SmartPackagingSystemDetail";
+import ZooBazaarDetail from "./pages/ZooBazaarDetail";
 
 const App: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -18,6 +19,10 @@ const App: React.FC = () => {
   
   if (currentPath === '/projects/smartpackagingsystem') {
     return <SmartPackagingSystemDetail />;
+  }
+
+  if (currentPath === '/projects/zoobazaar') {
+    return <ZooBazaarDetail />;
   }
 
   const handleSubmit = (e: React.MouseEvent) => {
@@ -55,7 +60,7 @@ const App: React.FC = () => {
       title: "Zoo Bazaar",
       description: "An application that lets the user see an overview of all the animals, feeding schedules, medical history, employee details, animals by area/species and aggregated data/statistics for the animals and the zoo.",
       image: "/images/ZooBazaar.png",
-      link: "#" 
+      link: "/projects/zoobazaar" 
     },
     {
       id: 4,
