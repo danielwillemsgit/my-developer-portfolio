@@ -6,13 +6,13 @@ const App: React.FC = () => {
     name: '',
     email: '',
     message: '',
-  })
+  });
 
   const handleSubmit = (e: React.MouseEvent) => {
-    e.preventDefault()
-    console.log('Form submitted:', formData)
-    alert('Message sent!')
-  }
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+    alert('Message sent!');
+  };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -20,8 +20,8 @@ const App: React.FC = () => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
-    })
-  }
+    });
+  };
 
   return (
     <div className="bg-gradient-to-br from-gray-50 via-white to-gray-100 min-h-screen">
@@ -52,8 +52,6 @@ const App: React.FC = () => {
           </p>
 
           <div className="flex gap-4 justify-center pt-8 relative">
-            <div className="absolute -left-64 top-1/2 -translate-y-1/2 hidden lg:block">
-            </div>
             <a
               href="#projects"
               className="bg-gray-900 text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-all hover:shadow-xl transform hover:-translate-y-0.5"
@@ -66,8 +64,6 @@ const App: React.FC = () => {
             >
               Contact Me
             </a>
-            <div className="absolute -right-64 top-1/2 -translate-y-1/2 hidden lg:block">
-            </div>
           </div>
 
           <div className="flex gap-6 justify-center pt-8">
@@ -118,10 +114,10 @@ const App: React.FC = () => {
           <h2 className="text-5xl font-bold mb-16">Featured Projects</h2>
           <div className="grid md:grid-cols-2 gap-12">
             {[1, 2, 3, 4].map((i: number) => {
-              const isFirstProject = i === 1
-              const isSecondProject = i === 2
-              const isThirdProject = i === 3
-              const isFourthProject = i === 4
+              const isFirstProject = i === 1;
+              const isSecondProject = i === 2;
+              const isThirdProject = i === 3;
+              const isFourthProject = i === 4;
 
               return (
                 <div
@@ -215,7 +211,7 @@ const App: React.FC = () => {
                     )}
                   </div>
                 </div>
-              )
+              );
             })}
           </div>
         </div>
@@ -228,8 +224,10 @@ const App: React.FC = () => {
             {[
               { name: 'C#', icon: '/icons/csharp.png' },
               { name: 'Java', icon: '/icons/java.png' },
+              { name: 'React & TypeScript', icons: ['/icons/react.png', '/icons/typescript.png'] },
               { name: 'JavaScript', icon: '/icons/javascript.png' },
               { name: 'HTML & CSS', icons: ['/icons/html.png', '/icons/css.png'] },
+              { name: 'Tailwind CSS', icon: '/icons/tailwindcss.png' },
               { name: 'Spring Boot', icon: '/icons/springboot.png' },
               { name: 'ASP.NET Core', icon: '/icons/netcore.png' },
               { name: 'REST APIs', icon: '/icons/restapi.png' },
@@ -238,6 +236,7 @@ const App: React.FC = () => {
               { name: 'Docker', icon: '/icons/docker.png' },
               { name: 'SonarQube', icon: '/icons/sonarqube.png' },
               { name: 'CI/CD Pipelines', icon: '/icons/cicd.png' },
+              { name: 'Postman', icon: '/icons/postman.png' },
             ].map((skill, i: number) => (
               <div
                 key={i}
@@ -325,7 +324,7 @@ const App: React.FC = () => {
         </div>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
