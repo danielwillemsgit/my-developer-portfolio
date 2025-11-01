@@ -121,7 +121,7 @@ const App: React.FC = () => {
 
           <div className="flex gap-6 justify-center pt-8">
             <a
-              href="https://github.com"
+              href="https://github.com/danielwillemsgit"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors text-sm focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-offset-2 rounded"
@@ -130,7 +130,7 @@ const App: React.FC = () => {
               GitHub
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/daniel-willems-93296630b/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors text-sm focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-offset-2 rounded"
