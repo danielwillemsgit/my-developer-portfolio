@@ -91,15 +91,21 @@ const App: React.FC = () => {
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="xMidYMid meet"
         >
+          <defs>
+            <linearGradient id="blueGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor="#0A56D8" />      
+              <stop offset="50%" stopColor="#3D82F8" />    
+              <stop offset="100%" stopColor="#0A56D8" />   
+            </linearGradient>
+          </defs>
           <path
             d="M400,0 C300,200 200,800 0,1000"
             fill="none"
-            stroke="#0A56D8"
+            stroke="url(#blueGradient)"
             strokeWidth="20"
             strokeLinecap="round"
           />
         </svg>
-
 
         <div className="max-w-4xl w-full text-center space-y-8 relative z-10">
           <div className="w-40 h-40 mx-auto mb-8 shadow-lg rounded-full overflow-hidden">
@@ -218,7 +224,7 @@ const App: React.FC = () => {
           </div>
         </div>
       </section>
-      
+
       <section id="skills" className="py-32 px-8">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-5xl font-bold mb-16">Skills & Technologies</h2>
