@@ -42,13 +42,14 @@ const BackgroundShape: React.FC = () => {
         </defs>
 
         <path
-          d="M240,0 
-             C180,200 150,400 100,550 
-             C50,700 130,850 180,950 
-             C210,1050 190,1150 200,1200"
+          d="M200,0 
+             C180,100 140,180 100,280
+             C60,380 20,480 40,600
+             C60,720 120,800 140,920
+             C160,1040 140,1120 150,1200"
           fill="none"
           stroke="url(#blueGradientLeft)"
-          strokeWidth="20"
+          strokeWidth="26"
           strokeLinecap="round"
           filter="url(#noiseFilterLeft)"
         />
@@ -72,16 +73,16 @@ const BackgroundShape: React.FC = () => {
             <feColorMatrix
               in="noise"
               type="matrix"
-              values="0.04 0 0 0 0
-                      0.34 0 0 0 0
-                      0.85 0 0 0 0
+              values="0.02 0 0 0 0
+                      0.20 0 0 0 0
+                      0.60 0 0 0 0
                       0 0 0 1 0"
               result="blueNoise"
             />
             <feComponentTransfer in="blueNoise" result="opacityNoise">
-              <feFuncA type="table" tableValues="0 0.4 0.6 0.8" />
+              <feFuncA type="table" tableValues="0 0.5 0.7 0.9" />
             </feComponentTransfer>
-            <feBlend mode="multiply" in="SourceGraphic" in2="opacityNoise" result="blended" />
+            <feBlend mode="darken" in="SourceGraphic" in2="opacityNoise" result="blended" />
             <feComposite in="blended" in2="SourceGraphic" operator="in" />
           </filter>
 
@@ -93,13 +94,14 @@ const BackgroundShape: React.FC = () => {
         </defs>
 
         <path
-          d="M60,0 
-             C90,100 200,250 150,450 
-             C120,600 220,750 180,900 
-             C150,1050 130,1150 100,1200"
+          d="M100,0 
+             C120,120 160,220 200,340
+             C240,460 280,580 260,720
+             C240,860 180,960 160,1080
+             C140,1160 150,1180 150,1200"
           fill="none"
           stroke="url(#blueGradientRight)"
-          strokeWidth="20"
+          strokeWidth="26"
           strokeLinecap="round"
           filter="url(#noiseFilterRight)"
         />
