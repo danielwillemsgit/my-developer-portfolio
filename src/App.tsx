@@ -155,19 +155,6 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      <section id="about" className="py-32 px-8 relative z-10">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-5xl font-bold mb-12">About Me</h2>
-          <p className="text-xl text-gray-700 leading-relaxed">
-            I am a passionate Full Stack Developer who enjoys building clean,
-            responsive, and user-friendly web applications. I love exploring new
-            technologies and frameworks, from front-end interfaces to scalable
-            back-end systems. My goal is to turn ideas into impactful digital
-            solutions through thoughtful design and reliable code.
-          </p>
-        </div>
-      </section>
-
       <section id="projects" className="py-32 px-8 bg-white relative z-10">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-5xl font-bold mb-16">Featured Projects</h2>
@@ -191,7 +178,7 @@ const App: React.FC = () => {
                   <p className="text-gray-700 mb-6">{project.description}</p>
                   <a
                     href={project.link}
-                    className="inline-block bg-gray-900 text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition-all hover:shadow-lg transform hover:-translate-y-0.5"
+                    className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-all hover:shadow-lg transform hover:-translate-y-0.5"
                   >
                     View Details →
                   </a>
@@ -246,20 +233,20 @@ const App: React.FC = () => {
                   <div className="flex gap-2">
                     {skill.icons
                       ? skill.icons.map((iconPath, idx) => (
-                          <img
-                            key={idx}
-                            src={iconPath}
-                            alt={`${skill.name} icon ${idx + 1}`}
-                            className="w-12 h-12"
-                          />
-                        ))
+                        <img
+                          key={idx}
+                          src={iconPath}
+                          alt={`${skill.name} icon ${idx + 1}`}
+                          className="w-12 h-12"
+                        />
+                      ))
                       : skill.icon && (
-                          <img
-                            src={skill.icon}
-                            alt={`${skill.name} icon`}
-                            className="w-12 h-12"
-                          />
-                        )}
+                        <img
+                          src={skill.icon}
+                          alt={`${skill.name} icon`}
+                          className="w-12 h-12"
+                        />
+                      )}
                   </div>
                 </div>
               </div>
@@ -301,7 +288,7 @@ const App: React.FC = () => {
             />
             <button
               onClick={handleSubmit}
-              className="w-full bg-gray-900 text-white px-8 py-4 rounded-xl hover:bg-gray-800 transition-all hover:shadow-xl transform hover:-translate-y-0.5 font-medium text-lg"
+              className="w-full bg-blue-600 text-white px-8 py-4 rounded-xl hover:bg-blue-700 transition-all hover:shadow-xl transform hover:-translate-y-0.5 font-medium text-lg"
               type="submit"
             >
               Send Message
