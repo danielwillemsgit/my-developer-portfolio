@@ -16,8 +16,12 @@ const BackgroundShape: React.FC = () => {
             <stop offset="100%" stopColor="#0A56D8" />
           </linearGradient>
         </defs>
+
         <path
-          d="M250,0 C150,200 200,600 100,800 C50,950 120,1100 200,1200"
+          d="M240,0 
+             C180,200 150,400 100,550 
+             C50,700 130,850 180,950 
+             C210,1050 190,1150 200,1200"
           fill="none"
           stroke="url(#blueGradientLeft)"
           strokeWidth="20"
@@ -38,8 +42,12 @@ const BackgroundShape: React.FC = () => {
             <stop offset="100%" stopColor="#0A56D8" />
           </linearGradient>
         </defs>
+
         <path
-          d="M50,0 C150,200 100,600 200,800 C250,950 180,1100 100,1200"
+          d="M60,0 
+             C90,100 200,250 150,450 
+             C120,600 220,750 180,900 
+             C150,1050 130,1150 100,1200"
           fill="none"
           stroke="url(#blueGradientRight)"
           strokeWidth="20"
