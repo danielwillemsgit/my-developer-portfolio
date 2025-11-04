@@ -17,7 +17,7 @@ const App: React.FC = () => {
   if (currentPath === '/projects/symphonyseat') {
     return <SymphonySeatDetail />;
   }
-  
+
   if (currentPath === '/projects/smartpackagingsystem') {
     return <SmartPackagingSystemDetail />;
   }
@@ -49,39 +49,59 @@ const App: React.FC = () => {
     {
       id: 1,
       title: "SymphonySeat",
-      description: "A concert and event ticketing platform where users can browse events, view artists, select seats on an interactive map, and purchase tickets. Organizers can manage events and artists, while admins track sales and real-time seat availability.",
+      description:
+        "A concert and event ticketing platform where users can browse events, view artists, select seats on an interactive map, and purchase tickets. Organizers can manage events and artists, while admins track sales and real-time seat availability.",
       image: "/images/SymphonySeat-HomePage.png",
-      link: "/projects/symphonyseat"
+      link: "/projects/symphonyseat",
     },
     {
       id: 2,
       title: "Smart Packaging System",
-      description: "A digital solution for Sioux Technologies that optimizes packaging logistics and tracks package storage efficiently.",
+      description:
+        "A digital solution for Sioux Technologies that optimizes packaging logistics and tracks package storage efficiently.",
       image: "/images/SmartPackagingSystemHomePage.png",
-      link: "/projects/smartpackagingsystem"
+      link: "/projects/smartpackagingsystem",
     },
     {
       id: 3,
       title: "Zoo Bazaar",
-      description: "An application that lets the user see an overview of all the animals, feeding schedules, medical history, employee details, animals by area/species and aggregated data/statistics for the animals and the zoo.",
+      description:
+        "An application that lets the user see an overview of all the animals, feeding schedules, medical history, employee details, animals by area/species and aggregated data/statistics for the animals and the zoo.",
       image: "/images/ZooBazaar.png",
-      link: "/projects/zoobazaar" 
+      link: "/projects/zoobazaar",
     },
     {
       id: 4,
       title: "CustomCar",
-      description: "A web application that allows customers to browse and purchase car parts online, while helping the business track sales, manage inventory, and attract more customers.",
+      description:
+        "A web application that allows customers to browse and purchase car parts online, while helping the business track sales, manage inventory, and attract more customers.",
       image: "/images/CustomCarHomePage.png",
-      link: "/projects/customcar" 
-    }
+      link: "/projects/customcar",
+    },
   ];
 
   return (
     <div className="bg-gradient-to-br from-gray-50 via-white to-gray-100 min-h-screen">
       <Navbar />
 
-      <section className="min-h-screen flex items-center justify-center px-8 pt-20 relative">
-        <div className="max-w-4xl w-full text-center space-y-8">
+      <section className="min-h-screen flex items-center justify-center px-8 pt-20 relative overflow-hidden">
+        <svg
+          className="absolute top-0 right-0 h-full w-auto pointer-events-none z-0"
+          viewBox="0 0 600 800"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="xMidYMid meet"
+        >
+          <path
+            d="M400,0 C300,200 200,800 0,1000"
+            fill="none"
+            stroke="#0A56D8"
+            strokeWidth="20"
+            strokeLinecap="round"
+          />
+        </svg>
+
+
+        <div className="max-w-4xl w-full text-center space-y-8 relative z-10">
           <div className="w-40 h-40 mx-auto mb-8 shadow-lg rounded-full overflow-hidden">
             <img
               src="/images/dwprofilepicture.jpg"
@@ -107,7 +127,7 @@ const App: React.FC = () => {
           <div className="flex gap-4 justify-center pt-8 relative">
             <a
               href="#projects"
-              className="bg-gray-900 text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-all hover:shadow-xl transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
+              className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-all hover:shadow-xl transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
             >
               View My Work
             </a>
@@ -184,9 +204,7 @@ const App: React.FC = () => {
                   <h3 className="text-2xl font-semibold mb-4">
                     {project.title}
                   </h3>
-                  <p className="text-gray-700 mb-6">
-                    {project.description}
-                  </p>
+                  <p className="text-gray-700 mb-6">{project.description}</p>
 
                   <a
                     href={project.link}
@@ -200,7 +218,7 @@ const App: React.FC = () => {
           </div>
         </div>
       </section>
-
+      
       <section id="skills" className="py-32 px-8">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-5xl font-bold mb-16">Skills & Technologies</h2>
