@@ -4,10 +4,10 @@ const BackgroundShape: React.FC = () => {
   return (
     <>
       <svg
-        className="fixed top-0 left-0 h-full w-auto pointer-events-none z-0"
-        viewBox="0 0 300 1200"
+        className="fixed top-0 left-0 h-full w-auto pointer-events-none z-0 opacity-80"
+        viewBox="0 0 400 1200"
         xmlns="http://www.w3.org/2000/svg"
-        preserveAspectRatio="xMidYMid meet"
+        preserveAspectRatio="xMinYMid meet"
       >
         <defs>
           <filter id="noiseFilterLeft" x="-50%" y="-50%" width="200%" height="200%">
@@ -36,30 +36,32 @@ const BackgroundShape: React.FC = () => {
 
           <linearGradient id="blueGradientLeft" x1="0%" y1="0%" x2="0%" y2="100%">
             <stop offset="0%" stopColor="#0A56D8" />
-            <stop offset="50%" stopColor="#3D82F8" />
+            <stop offset="30%" stopColor="#3D82F8" />
+            <stop offset="65%" stopColor="#1E5FCC" />
             <stop offset="100%" stopColor="#0A56D8" />
           </linearGradient>
         </defs>
 
         <path
-          d="M200,0 
-             C180,100 140,180 100,280
-             C60,380 20,480 40,600
-             C60,720 120,800 140,920
-             C160,1040 140,1120 150,1200"
+          d="M350,0 
+             C350,60 380,140 340,220
+             C300,300 200,340 160,450
+             C120,560 180,680 240,780
+             C300,880 350,920 320,1020
+             C290,1120 310,1180 305,1200"
           fill="none"
           stroke="url(#blueGradientLeft)"
-          strokeWidth="26"
+          strokeWidth="35"
           strokeLinecap="round"
           filter="url(#noiseFilterLeft)"
         />
       </svg>
 
       <svg
-        className="fixed top-0 right-0 h-full w-auto pointer-events-none z-0"
-        viewBox="0 0 300 1200"
+        className="fixed top-0 right-0 h-full w-auto pointer-events-none z-0 opacity-80"
+        viewBox="0 0 400 1200"
         xmlns="http://www.w3.org/2000/svg"
-        preserveAspectRatio="xMidYMid meet"
+        preserveAspectRatio="xMaxYMid meet"
       >
         <defs>
           <filter id="noiseFilterRight" x="-50%" y="-50%" width="200%" height="200%">
@@ -87,21 +89,22 @@ const BackgroundShape: React.FC = () => {
           </filter>
 
           <linearGradient id="blueGradientRight" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#0A56D8" />
-            <stop offset="50%" stopColor="#3D82F8" />
-            <stop offset="100%" stopColor="#0A56D8" />
+            <stop offset="0%" stopColor="#3D82F8" />
+            <stop offset="40%" stopColor="#0A56D8" />
+            <stop offset="70%" stopColor="#5A9EFF" />
+            <stop offset="100%" stopColor="#1E5FCC" />
           </linearGradient>
         </defs>
 
         <path
-          d="M100,0 
-             C120,120 160,220 200,340
-             C240,460 280,580 260,720
-             C240,860 180,960 160,1080
-             C140,1160 150,1180 150,1200"
+          d="M50,0 
+             C50,120 20,200 80,320
+             C140,440 240,500 280,640
+             C320,780 260,860 200,960
+             C140,1060 80,1100 100,1200"
           fill="none"
           stroke="url(#blueGradientRight)"
-          strokeWidth="26"
+          strokeWidth="35"
           strokeLinecap="round"
           filter="url(#noiseFilterRight)"
         />
