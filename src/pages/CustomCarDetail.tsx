@@ -21,9 +21,9 @@ const CustomCarDetail = () => {
 
                 <div className="w-full max-w-5xl aspect-video mb-16 shadow-2xl rounded-3xl overflow-hidden border border-gray-100">
                     <img
-                        src="/images/CustomCarHomePage.png"
+                        src="/images/seasonaltrend.png"
                         alt="CustomCar E-commerce Platform"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain"
                     />
                 </div>
 

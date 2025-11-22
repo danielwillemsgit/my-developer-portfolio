@@ -20,13 +20,10 @@ const ZooBazaarDetail = () => {
                 </p>
 
                 <div className="w-full max-w-5xl aspect-video mb-16 shadow-2xl rounded-3xl overflow-hidden border border-gray-100">
-                    <video
-                        src="/videos/zoobazaardemo1.mp4"
+                    <img
+                        src="/images/zoobazaarschedule.png"
+                        alt="Zoo Bazaar Schedule Interface"
                         className="w-full h-full object-cover"
-                        controls
-                        autoPlay
-                        muted
-                        loop
                     />
                 </div>
 
