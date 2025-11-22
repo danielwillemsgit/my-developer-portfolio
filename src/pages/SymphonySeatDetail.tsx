@@ -20,15 +20,11 @@ const SymphonySeatDetail = () => {
                 </p>
 
                 <div className="w-full max-w-5xl aspect-video mb-16 shadow-2xl rounded-3xl overflow-hidden border border-gray-100">
-                    <video
-                        controls
-                        loop
-                        className="w-full h-full"
-                        poster="/images/SymphonySeat-HomePage.png"
-                    >
-                        <source src="/videos/symphonyseat-demo.mp4" type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
+                    <img
+                        src="/images/SymphonySeat-SeatMap.png"
+                        alt="SymphonySeat Seat Map"
+                        className="w-full h-full object-cover"
+                    />
                 </div>
 
                 <div className="w-full max-w-6xl grid md:grid-cols-4 gap-6 text-sm md:text-base">

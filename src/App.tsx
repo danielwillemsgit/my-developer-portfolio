@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Navbar from "./components/Navbar";
 import SymphonySeatDetail from "./pages/SymphonySeatDetail";
 import SmartPackagingSystemDetail from "./pages/SmartPackagingSystemDetail";
@@ -7,12 +7,6 @@ import CustomCarDetail from "./pages/CustomCarDetail";
 import BackgroundShape from "./components/BackgroundShape";
 
 const App: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
   const currentPath = window.location.pathname;
 
   if (currentPath === "/projects/symphonyseat") {
@@ -30,21 +24,6 @@ const App: React.FC = () => {
   if (currentPath === "/projects/customcar") {
     return <CustomCarDetail />;
   }
-
-  const handleSubmit = (e: React.MouseEvent) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Message sent!");
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
 
   const projects = [
     {
@@ -68,7 +47,7 @@ const App: React.FC = () => {
       title: "Zoo Bazaar",
       description:
         "An application that lets the user see an overview of all the animals, feeding schedules, medical history, employee details, animals by area/species and aggregated data/statistics for the animals and the zoo.",
-      image: "/images/ZooBazaar.png",
+      image: "/images/zoobazaarwebapp1.png",
       link: "/projects/zoobazaar",
     },
     {
@@ -110,7 +89,7 @@ const App: React.FC = () => {
               View My Work
             </a>
             <a
-              href="#contact"
+              href="mailto:daniel.willems@student.fontys.nl"
               className="border-2 border-gray-900 px-8 py-3 rounded-lg hover:bg-gray-900 hover:text-white transition-all"
             >
               Contact Me
@@ -244,48 +223,6 @@ const App: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section id="contact" className="py-32 px-8 bg-white relative z-10">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-5xl font-bold mb-16 text-center">Get In Touch</h2>
-          <form className="space-y-6">
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              value={formData.name}
-              onChange={handleChange}
-              className="w-full border-2 border-gray-200 rounded-xl p-4 focus:outline-none focus:border-gray-900"
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              value={formData.email}
-              onChange={handleChange}
-              className="w-full border-2 border-gray-200 rounded-xl p-4 focus:outline-none focus:border-gray-900"
-              required
-            />
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              rows={6}
-              value={formData.message}
-              onChange={handleChange}
-              className="w-full border-2 border-gray-200 rounded-xl p-4 focus:outline-none focus:border-gray-900"
-              required
-            />
-            <button
-              onClick={handleSubmit}
-              className="w-full bg-blue-600 text-white px-8 py-4 rounded-xl hover:bg-blue-700 transition-all hover:shadow-xl transform hover:-translate-y-0.5 font-medium text-lg"
-              type="submit"
-            >
-              Send Message
-            </button>
-          </form>
         </div>
       </section>
 
