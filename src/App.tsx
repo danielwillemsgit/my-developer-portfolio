@@ -76,7 +76,7 @@ const App: React.FC = () => {
       title: "CustomCar",
       description:
         "A web application that allows customers to browse and purchase car parts online, while helping the business track sales, manage inventory, and attract more customers.",
-      image: "/images/CustomCarHomePage.png",
+      image: "/images/customcarwebshop1.png",
       link: "/projects/customcar",
     },
   ];
@@ -88,14 +88,6 @@ const App: React.FC = () => {
 
       <section className="min-h-screen flex items-center justify-center px-8 pt-20 relative z-10">
         <div className="max-w-4xl w-full text-center space-y-8">
-          <div className="w-40 h-40 mx-auto mb-8 shadow-lg rounded-full overflow-hidden">
-            <img
-              src="/images/dwprofilepicture.jpg"
-              alt="Daniel Willems - Full Stack Developer"
-              className="w-full h-full object-cover"
-            />
-          </div>
-
           <h1 className="text-6xl md:text-7xl font-bold tracking-tight">
             Daniel Willems
           </h1>
