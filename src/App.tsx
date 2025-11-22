@@ -65,7 +65,7 @@ const App: React.FC = () => {
       <BackgroundShape />
       <Navbar />
 
-      <section className="min-h-screen flex items-center justify-center px-8 pt-20 relative z-10">
+      <section id="contact" className="min-h-screen flex items-center justify-center px-8 pt-20 relative z-10">
         <div className="max-w-4xl w-full text-center space-y-8">
           <h1 className="text-6xl md:text-7xl font-bold tracking-tight">
             Daniel Willems
